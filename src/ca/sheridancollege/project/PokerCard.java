@@ -17,6 +17,8 @@ public class PokerCard extends Card {
     private CardValues value;
     public static final String[] SUITS = {"Hearts", "Diamonds", "Spades", 
         "Clubs"};
+    
+    
     @Override
     public String toString(){
         
