@@ -9,17 +9,21 @@
 
 package ca.sheridancollege.project;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author jrgra
  */
-public class PlayerDeck extends GeneralDeck{
-
+public class PlayerDeck extends GeneralDeck {
+    ArrayList<Card> deck;
     public PlayerDeck(int size) {
         super(size);
+        deck = super.showCards();
+        
     }
     
     public Card drawCard(){
-        return showCards().remove(0);
+        return super.showCards().remove(0);
     }
 }

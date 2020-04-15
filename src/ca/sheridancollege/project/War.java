@@ -15,4 +15,15 @@ package ca.sheridancollege.project;
  */
 public class War {
 
+    public static void main(String[] args) {
+        PlayerDeck deck1 = new PlayerDeck(26);
+        
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 13; j++) {
+                PokerCard card = new PokerCard(j, i);
+                deck1.addCard(card);
+            }
+        }
+        System.out.println(deck1.drawCard());
+    }
 }

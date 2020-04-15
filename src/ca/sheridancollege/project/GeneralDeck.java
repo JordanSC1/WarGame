@@ -9,11 +9,14 @@
 
 package ca.sheridancollege.project;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author jrgra
  */
 public class GeneralDeck extends GroupOfCards {
+    
     public GeneralDeck(int size) {
         super(size);
     }
@@ -22,5 +25,9 @@ public class GeneralDeck extends GroupOfCards {
         for (Card card : cardPile.showCards()) {
             showCards().add(card);
         }
+    }
+    
+    public void addCard(Card card) {
+        super.showCards().add(card);
     }
 }
