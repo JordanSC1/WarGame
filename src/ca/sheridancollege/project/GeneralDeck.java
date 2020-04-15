@@ -13,13 +13,14 @@ package ca.sheridancollege.project;
  *
  * @author jrgra
  */
-public class PlayerDeck extends GeneralDeck{
-
-    public PlayerDeck(int size) {
+public class GeneralDeck extends GroupOfCards {
+    public GeneralDeck(int size) {
         super(size);
     }
     
-    public Card drawCard(){
-        return showCards().remove(0);
+    public void addCards(GroupOfCards cardPile){
+        for (Card card : cardPile.showCards()) {
+            showCards().add(card);
+        }
     }
 }

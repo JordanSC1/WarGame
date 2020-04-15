@@ -13,13 +13,6 @@ package ca.sheridancollege.project;
  *
  * @author jrgra
  */
-public class PlayerDeck extends GeneralDeck{
+public class WinningsPile {
 
-    public PlayerDeck(int size) {
-        super(size);
-    }
-    
-    public Card drawCard(){
-        return showCards().remove(0);
-    }
 }
