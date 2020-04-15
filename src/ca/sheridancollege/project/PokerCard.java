@@ -14,13 +14,19 @@ package ca.sheridancollege.project;
  * @author jrgra
  */
 public class PokerCard extends Card {
-    private CardValues value;
-    public static final String[] SUITS = {"Hearts", "Diamonds", "Spades", 
+    private static CardValues value;
+    private static String suit;
+    private static final String[] SUITS = {"Hearts", "Diamonds", "Spades", 
         "Clubs"};
     
+    public PokerCard(int val, int suitNumber) {
+        this.value = CardValues.values()[val];
+        this.suit = SUITS[suitNumber];
+    }
     
     @Override
     public String toString(){
-        
+        String cardString = value.getName() + " of " + suit;
+        return cardString;
     }
 }
