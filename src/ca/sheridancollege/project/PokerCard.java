@@ -24,6 +24,10 @@ public class PokerCard extends Card {
         this.suit = SUITS[suitNumber];
     }
     
+    public int getCardValue() {
+        return value.getVal();
+    }
+    
     @Override
     public String toString(){
         String cardString = value.getName() + " of " + suit;
