@@ -16,10 +16,8 @@ import java.util.ArrayList;
  * @author jrgra
  */
 public class PlayerDeck extends GeneralDeck {
-    ArrayList<Card> deck;
     public PlayerDeck(int size) {
         super(size);
-        deck = super.showCards();
         
     }
     

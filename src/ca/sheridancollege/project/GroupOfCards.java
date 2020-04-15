@@ -18,13 +18,12 @@ public class GroupOfCards
 {
    
     //The group of cards, stored in an ArrayList
-    private ArrayList <Card> cards;
+    private ArrayList <Card> cards= new ArrayList<>();
     private int size;//the size of the grouping
     
     public GroupOfCards(int givenSize)
     {
         size = givenSize;
-        cards = new ArrayList<>();
     }
     
     /**

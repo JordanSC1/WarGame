@@ -16,14 +16,17 @@ import java.util.ArrayList;
  * @author jrgra
  */
 public class GeneralDeck extends GroupOfCards {
+    ArrayList<Card> deck;
     
     public GeneralDeck(int size) {
         super(size);
     }
     
     public void addCards(GroupOfCards cardPile){
-        for (Card card : cardPile.showCards()) {
-            showCards().add(card);
+        int i = 0;
+        while (super.showCards().size() < super.getSize()) {
+            super.showCards().add(cardPile.showCards().remove(i));
+            i++;
         }
     }
     

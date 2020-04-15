@@ -14,9 +14,9 @@ package ca.sheridancollege.project;
  * @author jrgra
  */
 public class PokerCard extends Card {
-    private static CardValues value;
-    private static String suit;
-    private static final String[] SUITS = {"Hearts", "Diamonds", "Spades", 
+    private CardValues value;
+    private String suit;
+    private final String[] SUITS = {"Hearts", "Diamonds", "Spades", 
         "Clubs"};
     
     public PokerCard(int val, int suitNumber) {
