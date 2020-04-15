@@ -14,7 +14,6 @@ package ca.sheridancollege.project;
  * @author jrgra
  */
 public class PlayerDeck extends GroupOfCards {
-
     public PlayerDeck(int size) {
         super(size);
     }
