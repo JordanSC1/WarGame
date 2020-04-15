@@ -13,6 +13,6 @@ package ca.sheridancollege.project;
  *
  * @author jrgra
  */
-public class WinningsPile {
+public class War {
 
 }
