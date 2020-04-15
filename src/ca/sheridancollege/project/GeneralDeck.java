@@ -22,11 +22,9 @@ public class GeneralDeck extends GroupOfCards {
         super(size);
     }
     
-    public void addCards(GroupOfCards cardPile){
-        int i = 0;
-        while (super.showCards().size() < super.getSize()) {
+    public void addCards(GroupOfCards cardPile, int numCards){
+        for (int i = 0; i < numCards; i++) {
             super.showCards().add(cardPile.showCards().remove(i));
-            i++;
         }
     }
     
