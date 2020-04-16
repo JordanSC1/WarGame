@@ -45,4 +45,12 @@ public abstract class Player
      */
     public abstract void play();
     
+    public abstract boolean isDead();
+    
+    public abstract Card getCard();
+        
+    public abstract PlayerDeck getDeck();
+    
+    public abstract void clearCard();
+    
 }

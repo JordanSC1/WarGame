@@ -10,25 +10,32 @@
 package ca.sheridancollege.project;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
  * @author jrgra
  */
 public class GeneralDeck extends GroupOfCards {
-    ArrayList<Card> deck;
+    ArrayList<Card> deck  = new ArrayList<>();
     
     public GeneralDeck(int size) {
         super(size);
+        super.showCards().equals(deck);
     }
     
-    public void addCards(GroupOfCards cardPile, int numCards){
-        for (int i = 0; i < numCards; i++) {
-            super.showCards().add(cardPile.showCards().remove(i));
+    public void addCards(List<Card> cardPile){
+        for (Card card : cardPile) {
+            addCard(card);
         }
     }
     
     public void addCard(Card card) {
         super.showCards().add(card);
+        super.setSize(super.showCards().size());
+    }
+    
+    public void clearDeck(){
+        super.showCards().clear();
     }
 }

@@ -22,6 +22,8 @@ public class PlayerDeck extends GeneralDeck {
     }
     
     public Card drawCard(){
-        return super.showCards().remove(0);
+        Card card = super.showCards().remove(0);
+        super.setSize(super.showCards().size());
+        return card;
     }
 }

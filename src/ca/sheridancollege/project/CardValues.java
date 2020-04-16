@@ -10,7 +10,7 @@ package ca.sheridancollege.project;
  * @author jrgra
  */
 public enum CardValues {
-    ACE(1,"Ace"),
+    ACE(14,"Ace"),
     TWO(2,"Two"),
     THREE(3,"Three"),
     FOUR(4,"Four"),
