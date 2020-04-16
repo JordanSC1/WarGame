@@ -1,10 +1,11 @@
 /*
-    [Class name]
-    Author: [the name of the person who created the class. It might be different from yours]
-    Date: [date]
+    GeneralDeck.java
+    Author: Jordan Graham
+    Date: 2020-04-10
 
     Description
-    [Description about the class]
+    A general deck class with the capability to add one or more cards, and clear
+    the deck.
     */
 
 package ca.sheridancollege.project;
@@ -17,11 +18,9 @@ import java.util.List;
  * @author jrgra
  */
 public class GeneralDeck extends GroupOfCards {
-    ArrayList<Card> deck  = new ArrayList<>();
     
     public GeneralDeck(int size) {
         super(size);
-        super.showCards().equals(deck);
     }
     
     public void addCards(List<Card> cardPile){
