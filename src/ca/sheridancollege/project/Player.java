@@ -45,12 +45,35 @@ public abstract class Player
      */
     public abstract void play();
     
-    public abstract boolean isDead();
     
+    
+    /**
+     * method which will checks if the player has lost
+     * @return true if player lost, false otherwise
+     */
+    public abstract boolean isDead();
+
+    /**
+     * gets the player's card
+     * @return the players card
+     */
     public abstract Card getCard();
         
+    /**
+     * gets the players deck
+     * @return the deck of the player
+     */
     public abstract PlayerDeck getDeck();
     
+    /**
+     * method to get rid of the players current card
+     */
     public abstract void clearCard();
+    
+    /**
+     * method to check if the player is on the brink of losing
+     * @return true if they are on the brink of death, false otherwise
+     */
+    public abstract boolean isDying();
     
 }

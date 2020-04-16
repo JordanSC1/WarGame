@@ -13,7 +13,12 @@ package ca.sheridancollege.project;
  */
 public abstract class Card 
 {
-    //default modifier for child classes
+    // modified by Jordan Graham, 2020-04-12
+    
+    /**
+     * abstract method to be implemented in PokerCard, 
+     * @return the value of the card
+     */
     public abstract int getCardValue();
     
     /**
