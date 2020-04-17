@@ -110,7 +110,7 @@ public class War extends Game{
     * CardInPlay (exception: if p1's card is 6, and p2's card is an ace, p1 win)
     * otherwise it returns true
     */
-    public boolean winRound(Player p1, Player p2) {
+    public static boolean winRound(Player p1, Player p2) {
         if (p1.getCard().getCardValue() == 6 && 
                 p2.getCard().getCardValue() == 14) {
             return true;
