@@ -22,12 +22,11 @@ import java.util.concurrent.TimeUnit;
 public class War extends Game{
     
     
-    private final WarPlayer player;
-    private final WarPlayer cpu = new WarPlayer("CPU");
-    private final ArrayList<Player> players;
-    private final GeneralDeck gameDeck;
-    Scanner in = new Scanner(System.in);
-    
+    public static WarPlayer player;
+    public static WarPlayer cpu = new WarPlayer("CPU");
+    public static ArrayList<Player> players;
+    public static GeneralDeck gameDeck;
+    public static Scanner in = new Scanner(System.in);
     
     public static void main(String[] args) {
         War game = new War("War");
@@ -53,6 +52,37 @@ public class War extends Game{
         // adds the player and the cpu to the players ArrayList
         players.add(cpu);
         players.add(player);
+        // adds the players to the list of players
+        super.setPlayers(players);
+        
+        // populates the gameDeck with PokerCards
+        System.out.println("Initializing game deck");
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 13; j++) {
+                Card card = new PokerCard(j, i);
+                gameDeck.addCard(card);
+            }
+
+        }
+        
+        //shuffles the game deck
+        gameDeck.shuffle();
+        System.out.println("Finished initializing game deck");
+        System.out.println("Initializing Player decks");
+        
+        // adding cards to both the player and the cpu decks
+        player.getDeck().addCards(gameDeck.showCards().subList(0, 
+                gameDeck.getSize() / 2));
+
+        cpu.getDeck().addCards(gameDeck.showCards().subList(gameDeck.getSize() 
+                / 2, gameDeck.getSize()));
+
+        gameDeck.clearDeck();
+        System.out.println("Finished initializing Player decks");
+        
+        //prompts the user to start the game with enter
+        System.out.println("Press enter to start the game");
+        in.nextLine();
     }
     
     
@@ -125,37 +155,6 @@ public class War extends Game{
     */
     @Override
     public void play(){
-        // adds the players to the list of players
-        super.setPlayers(players);
-        
-        // populates the gameDeck with PokerCards
-        System.out.println("Initializing game deck");
-        for (int i = 0; i < 4; i++) {
-            for (int j = 0; j < 13; j++) {
-                Card card = new PokerCard(j, i);
-                gameDeck.addCard(card);
-            }
-
-        }
-        
-        //shuffles the game deck
-        gameDeck.shuffle();
-        System.out.println("Finished initializing game deck");
-        System.out.println("Initializing Player decks");
-        
-        // adding cards to both the player and the cpu decks
-        player.getDeck().addCards(gameDeck.showCards().subList(0, 
-                gameDeck.getSize() / 2));
-
-        cpu.getDeck().addCards(gameDeck.showCards().subList(gameDeck.getSize() 
-                / 2, gameDeck.getSize()));
-
-        gameDeck.clearDeck();
-        System.out.println("Finished initializing Player decks");
-        
-        //prompts the user to start the game with enter
-        System.out.println("Press enter to start the game");
-        in.nextLine();
         
         // while neither player is dead
         while (continueGame()) {
