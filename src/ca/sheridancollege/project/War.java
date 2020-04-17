@@ -29,6 +29,13 @@ public class War extends Game{
     public static Scanner in = new Scanner(System.in);
     
     public static void main(String[] args) {
+        
+        System.out.println("WAR IS UPON US!");
+        System.out.println("CARDS ARE YOUR BLOOD! AND YOUR WARRIORS!");
+        System.out.println("DRAW AND COMBAT! THE BIGGER CARD WINS THE ROUND!");
+        System.out.println("ACE RULES, BUT FALLS PREY TO 6, SUMMONER OF DEMONS");
+        System.out.println("READY NOW? TO DEATH!!!\n");
+        
         War game = new War("War");
         game.play();
     }
