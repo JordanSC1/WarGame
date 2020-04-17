@@ -39,7 +39,7 @@ public class WarTest {
 
     @Test    
     public void testWinRoundGood() {
-        
+        System.out.println("testWinRoundGood");
         War.player = new WarPlayer("p1");
         War.cpu = new WarPlayer("p2");
         boolean expResult = true;
@@ -55,7 +55,7 @@ public class WarTest {
     
     @Test    
     public void testWinRoundBad() {
-        
+        System.out.println("testWinRoundBad");
         War.player = new WarPlayer("p1");
         War.cpu = new WarPlayer("p2");
         boolean expResult = false;
@@ -71,7 +71,7 @@ public class WarTest {
     
     @Test  
     public void testWinRoundBoundary() {
-        
+        System.out.println("testWinRoundBoundary");
         War.player = new WarPlayer("p1");
         War.cpu = new WarPlayer("p2");
         boolean expResult = true;
